@@ -1,3 +1,3 @@
-# MakeFun
+# HaveFun
 
-make something fun!
+do something very insterting
