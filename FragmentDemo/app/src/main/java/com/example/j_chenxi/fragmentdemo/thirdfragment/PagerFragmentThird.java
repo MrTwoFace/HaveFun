@@ -181,31 +181,20 @@ public class PagerFragmentThird extends BaseFragment {
             public void run() {
                 while (true) {
                     if (rate < 95) {
+                        if(ENDownloadViews.size()<3){
+                            final ENDownloadView view = new ENDownloadView(getActivity());
+                            final LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(Distance.dp2px(getActivity(), 80), Distance.dp2px(getActivity(), 80));
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    view_layout.addView(view, lp);
+                                    view.start();
+                                }
+                            });
+                            ENDownloadViews.add(view);
+                        }else{
 
-//                        ImageView item1 = new ImageView(getActivity());
-//
-//                        item1.setImageResource(R.drawable.icon);//设置图片
-//
-//                        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-//
-//                                LinearLayout. LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT);
-//
-//                        lp.leftMargin=30;
-//
-//                        lp.topMargin=30;
-//
-//                        item1.setLayoutParams(lp);//设置布局参数
-//
-//                        view_layout.addView(item1);//RelativeLayout添加子View
-                        final ENDownloadView view = new ENDownloadView(getActivity());
-                        final LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(Distance.dp2px(getActivity(), 80), Distance.dp2px(getActivity(), 80));
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                view_layout.addView(view, lp);
-                                view.start();
-                            }
-                        });
+                        }
 
                     }
                     try {
