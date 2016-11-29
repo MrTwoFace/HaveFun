@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.j_chenxi.fragmentdemo.MainActivity">
+
+    <TextView
+        android:id="@+id/fragment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:text="text"/>
+
+    <Button
+        android:id="@+id/change_button"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:text="child1"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

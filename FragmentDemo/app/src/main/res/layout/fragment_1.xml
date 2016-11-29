@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#787878"
+    tools:context="com.example.j_chenxi.fragmentdemo.MainActivity">
+
+    <TextView
+        android:id="@+id/fragment_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="text"/>
+
+
+    <TextView
+        android:id="@+id/battery_txt"
+        tools:text="123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"/>
+    <LinearLayout
+        android:id="@+id/phone_value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#EEE685"
+            android:textSize="13sp"
+            android:text="铃声音量"/>
+        <SeekBar
+            android:id="@+id/phone_value_seekbar"
+            android:layout_marginLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:minHeight="1dp"
+            android:maxHeight="1dp"
+            android:progressDrawable="@drawable/music_seekbar_param"
+            android:thumb="@drawable/music_thumb"
+            android:indeterminate="false" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/music_value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_value_layout"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#EEE685"
+            android:textSize="13sp"
+            android:text="媒体音量"/>
+        <SeekBar
+            android:id="@+id/music_value_seekbar"
+            android:layout_marginLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:minHeight="1dp"
+            android:maxHeight="1dp"
+            android:progressDrawable="@drawable/music_seekbar_param"
+            android:thumb="@drawable/music_thumb"
+            android:indeterminate="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/voice_value_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/music_value_layout"
+        android:layout_marginRight="12dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#EEE685"
+            android:textSize="13sp"
+            android:text="通话音量"/>
+        <SeekBar
+            android:id="@+id/voice_value_seekbar"
+            android:layout_marginLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:minHeight="1dp"
+            android:maxHeight="1dp"
+            android:progressDrawable="@drawable/music_seekbar_param"
+            android:thumb="@drawable/music_thumb"
+            android:indeterminate="false" />
+    </LinearLayout>
+</RelativeLayout>
